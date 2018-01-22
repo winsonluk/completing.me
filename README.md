@@ -2,7 +2,10 @@
 
 **Search for a city from a provided list with [React](https://facebook.github.io/react/).**
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and uses [Material-UI](https://material-ui.com) for a material design aesthetic. The application is hosted on Amazon Web Service's Simple Storage Service (S3) with Route 53 domain registration and DNS services.
+This project was bootstrapped with [Create React
+App](https://github.com/facebookincubator/create-react-app) and uses
+[Material-UI](https://material-ui.com) for a material design aesthetic. The application is hosted on
+Github Pages with Amazon Web Service's Route 53 domain registration and DNS services.
 
 ## Title Bar
 The title bar was implemented with Material UI's AppBar. The default menu icon button was manually removed for simplicity.
