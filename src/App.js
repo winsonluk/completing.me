@@ -90,6 +90,7 @@ class App extends Component {
           id="matchError"
           style={{display: 'none'}}
           secondaryText="Sorry, I couldn't find any matches for you. Perhaps try a different city?"
+          secondaryTextLines="2"
           disabled={true}
         />
       </List>
@@ -99,6 +100,7 @@ class App extends Component {
         <ListItem
           id="minError"
           secondaryText="Please type at least 3 characters so that I can find your city."
+          secondaryTextLines="2"
           disabled={true}
         />
       </List>
