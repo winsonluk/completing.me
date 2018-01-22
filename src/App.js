@@ -35,7 +35,7 @@ class App extends Component {
 		if (match.length >= 3) {
       cities.forEach((city) => {
         if (city.startsWith(match.toLowerCase())) {
-          console.log(city);
+          document.getElementById(city).style.display="block";
         }
       });
     }
@@ -46,6 +46,8 @@ class App extends Component {
       items.push (
         <List>
           <ListItem
+            id={city}
+            style={{display: 'none'}}
             primaryText={city.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}
           />
         </List>
