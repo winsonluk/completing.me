@@ -32,19 +32,19 @@ const cities = [
 
 class App extends Component {
   handleChange(e, match) {
-		if (match.length >= 3) {
-      cities.forEach((city) => {
-        if (city.startsWith(match.toLowerCase())) {
-          document.getElementById(city).style.display="block";
-        }
-      });
-    }
+    cities.forEach((city) => {
+      if (match.length >= 3 && city.startsWith(match.toLowerCase())) {
+        document.getElementById(city).style.display="block";
+      } else {
+        document.getElementById(city).style.display="none";
+      }
+    });
   }
   render() {
     let items = [];
     cities.forEach((city) => {
       items.push (
-        <List>
+        <List style={{padding: '0px'}}>
           <ListItem
             id={city}
             style={{display: 'none'}}
