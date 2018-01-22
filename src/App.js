@@ -1,35 +1,37 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
+import {Card, CardHeader} from 'material-ui/Card';
 import logo from './logo.svg';
 import './App.css';
 
+const cities = [
+  'san jose',
+  'santiago',
+  'san francisco',
+  'santa rosa',
+  'san juan',
+  'sabadell',
+  'salamanca',
+  'salt lake city',
+  'salinas',
+  'salem',
+  'sausalito',
+  'taipei',
+  'tel aviv',
+  'tempe',
+  'termez',
+  'temuco',
+  'tiajuna',
+  'tieling',
+  'thousand oaks',
+  'thunder bay',
+  'tokyo',
+  'tulsa'
+]
+
 class App extends Component {
   handleChange(e, match) {
-		const cities = [
-      'san jose',
-      'santiago',
-      'san francisco',
-      'santa rosa',
-      'san juan',
-      'sabadell',
-      'salamanca',
-      'salt lake city',
-      'salinas',
-      'salem',
-      'sausalito',
-      'taipei',
-      'tel aviv',
-      'tempe',
-      'termez',
-      'temuco',
-      'tiajuna',
-      'tieling',
-      'thousand oaks',
-      'thunder bay',
-      'tokyo',
-      'tulsa'
-    ]
 		if (match.length >= 3) {
       cities.forEach((city) => {
         if (city.startsWith(match.toLowerCase())) {
@@ -39,6 +41,16 @@ class App extends Component {
     }
   }
   render() {
+    let cards = [];
+    cities.forEach((city) => {
+      cards.push (
+        <Card>
+          <CardHeader
+            title={city.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}
+          />
+        </Card>
+      );
+    });
     return (
       <MuiThemeProvider>
       <div className="App">
@@ -54,6 +66,7 @@ class App extends Component {
           floatingLabelText="floating label text"
           onChange={this.handleChange}
         />
+        {cards}
       </div>
       </MuiThemeProvider>
     );
