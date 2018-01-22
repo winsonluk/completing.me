@@ -7,11 +7,9 @@ App](https://github.com/facebookincubator/create-react-app) and uses
 [Material-UI](https://material-ui.com) for a material design aesthetic. The application is hosted on
 Github Pages with Amazon Web Service's Route 53 domain registration and DNS services.
 
-The two dependencies are React and Material-UI.
+Please install React if you do not yet have it installed.
 
 `npm install react`
-
-`npm install Material-UI`
 
 To run the application, simply execute `npm start`.
 
