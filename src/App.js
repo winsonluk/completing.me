@@ -53,6 +53,9 @@ class App extends Component {
         </List>
       );
     });
+    const focusInput = input => {
+      input.focus();
+    };
     return (
       <MuiThemeProvider>
       <div className="App">
@@ -64,6 +67,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <TextField
+          ref={focusInput}
           hintText="hint text"
           floatingLabelText="floating label text"
           onChange={this.handleChange}
