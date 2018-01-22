@@ -23,6 +23,7 @@ messages. The search results are displayed by a handleChange() method, which set
 `block` or `none` depending on whether a city or error message should be displayed.
 
 ## Title Bar
+
 The title bar was implemented with Material UI's AppBar. The default menu icon button was manually removed for simplicity.
 
 ## Search Bar
@@ -32,3 +33,9 @@ The search bar is a Material UI TextField. .focus() is called to load the search
 ## List and Error Messages
 
 Both the list of cities and error messages reside within a Material UI List. Items on the list are hidden by default and revealed when handleChange() deems it appropriate to do so. Custom styling was required on the error messages to ensure that they contrast enough with actual results.
+
+## Future Improvements
+
+* Support for loading cities from an exteranal source (CSV, JSON, SQL database, etc.,)
+* Continuous integration and automated tests for the handleChange() function (and others).
+* Migrate from Github Pages to AWS for administrative flexibility and richer analytics.
