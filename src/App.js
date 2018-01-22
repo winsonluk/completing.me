@@ -4,7 +4,10 @@ import TextField from 'material-ui/TextField';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends React.Component {
+class App extends Component {
+  handleChange(e, city) {
+    console.log(city)
+  }
   render() {
     return (
       <MuiThemeProvider>
@@ -19,6 +22,7 @@ class App extends React.Component {
         <TextField
           hintText="hint text"
           floatingLabelText="floating label text"
+          onChange={this.handleChange}
         />
       </div>
       </MuiThemeProvider>
