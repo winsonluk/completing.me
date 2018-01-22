@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
-import {Card, CardHeader} from 'material-ui/Card';
+import {List, ListItem} from 'material-ui/List';
 import logo from './logo.svg';
 import './App.css';
 
@@ -41,14 +41,14 @@ class App extends Component {
     }
   }
   render() {
-    let cards = [];
+    let items = [];
     cities.forEach((city) => {
-      cards.push (
-        <Card>
-          <CardHeader
-            title={city.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}
+      items.push (
+        <List>
+          <ListItem
+            primaryText={city.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();})}
           />
-        </Card>
+        </List>
       );
     });
     return (
@@ -66,7 +66,7 @@ class App extends Component {
           floatingLabelText="floating label text"
           onChange={this.handleChange}
         />
-        {cards}
+        {items}
       </div>
       </MuiThemeProvider>
     );
