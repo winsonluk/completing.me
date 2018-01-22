@@ -5,8 +5,38 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  handleChange(e, city) {
-    console.log(city)
+  handleChange(e, match) {
+		const cities = [
+      'san jose',
+      'santiago',
+      'san francisco',
+      'santa rosa',
+      'san juan',
+      'sabadell',
+      'salamanca',
+      'salt lake city',
+      'salinas',
+      'salem',
+      'sausalito',
+      'taipei',
+      'tel aviv',
+      'tempe',
+      'termez',
+      'temuco',
+      'tiajuna',
+      'tieling',
+      'thousand oaks',
+      'thunder bay',
+      'tokyo',
+      'tulsa'
+    ]
+		if (match.length >= 3) {
+      cities.forEach((city) => {
+        if (city.startsWith(match.toLowerCase())) {
+          console.log(city);
+        }
+      });
+    }
   }
   render() {
     return (
