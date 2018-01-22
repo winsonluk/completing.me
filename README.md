@@ -8,7 +8,9 @@ App](https://github.com/facebookincubator/create-react-app) and uses
 Github Pages with Amazon Web Service's Route 53 domain registration and DNS services.
 
 The two dependencies are React and Material-UI.
+
 `npm install react`
+
 `npm install Material-UI`
 
 To run the application, simply execute `npm start`.
@@ -16,9 +18,9 @@ To run the application, simply execute `npm start`.
 ## Challenge
 
 With a provided list (formatted as a JavaScript array), users should be able to search for a city on
-the list, with results updated live as soon as a user types in 3 characters. Error messages should
-be shown when fewer than 3 characters are entered or when no matches are found. My application is
-formatted in 3 parts: a title bar, a search bar, and a dynamic list showing cities and error
+the list, with results updated live as soon as a user types in three characters. Error messages should
+be shown when fewer than three characters are entered or when no matches are found. My application is
+formatted in three parts: a title bar, a search bar, and a dynamic list showing cities and error
 messages. The search results are displayed by a handleChange() method, which sets style.display to
 `block` or `none` depending on whether a city or error message should be displayed.
 
