@@ -36,7 +36,7 @@ Both the list of cities and error messages reside within a Material UI List. Ite
 
 ## Future Improvements
 
-* Support for loading cities from an exteranal source (CSV, JSON, SQL database, etc.,)
+* Support for loading cities from an external source (CSV, JSON, SQL database, etc.,)
 * Continuous integration and automated tests for the handleChange() function (and others).
 * Migrate from Github Pages to AWS for administrative flexibility and richer analytics.
 * The current runtime complexity of handleChange() is O(*np*) where *n* is the lenght of the list and *p* is the number of total characters typed. The efficiency of handleChange() could be improved by sorting the list or implementing a hash table.
